@@ -1,5 +1,8 @@
 ﻿#include <iostream>
+#include <string>
+#include <cmath>
 #include "Calculatur.h"
+#include "dergee.h"
 
 using namespace std;
 
@@ -8,14 +11,15 @@ int main()
     bool status = true;
     char select;
 
-    setlocale(LC_ALL, "Russian");
+    setlocale(LC_ALL, "ru");
 
     cout << "Программа Калькулятор версия 2.0.0.0, разработчик: Мальцев Глеб Евгеньевич" << endl << endl;
     cout << "Выбирите режим калькулятора:" << endl;
     cout << "1 - Простые операции" << endl;
-    cout << "2 - Возведение в степень" << endl;
-    cout << "3 - Вычесление корня" << endl;
-    cout << "4 - Решение линейного уровнения" << endl << endl;
+    cout << "2 - Вычесление корня" << endl;
+    cout << "3 - Возведение в степень" << endl;
+    cout << "4 - Решение линейного уровнения" << endl;
+    cout << "5 - Решение корня квадратного уравнения" << endl << endl;
 
     while (status)
     {
@@ -35,6 +39,9 @@ int main()
                     break;
                 case '4':
                     cout << "4" << endl;
+                    break;
+                case '5':
+                    cout << "5" << endl;
                     break;
                 default:
                     cout << "Неверный выбор режима, повторите ввод." << endl;

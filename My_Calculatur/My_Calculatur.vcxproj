@@ -128,10 +128,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Calculatur.cpp" />
+    <ClCompile Include="dergee.cpp" />
     <ClCompile Include="My_Calculatur.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Calculatur.h" />
+    <ClInclude Include="dergee.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
