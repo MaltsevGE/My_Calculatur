@@ -1,8 +1,6 @@
 ﻿#include <iostream>
 #include <string>
-#include <cmath>
-#include "Calculatur.h"
-#include "dergee.h"
+#include "calculator.h"
 
 using namespace std;
 
@@ -60,10 +58,10 @@ int main()
     double result = 0.0;
     char oper = '+';
 
-    
+ /*
     cout << "Пожалуйста, введите операцию, которую необходимо выполнить. Формат: a+b | a-b | a*b | a/b" << endl;
     
-    Calculatur c;
+    calculator c;
     while (true)
     {
         cin >> x >> oper >> y;
@@ -79,6 +77,7 @@ int main()
         }
         cout << "Результат " << "операция " << x << oper << y << " равен: " << result << endl;
     }
+*/
 
     return 0;
 }
