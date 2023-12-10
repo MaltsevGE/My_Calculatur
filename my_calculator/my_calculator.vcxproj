@@ -22,7 +22,7 @@
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{ed78d43c-68db-430a-80c6-f956922b118b}</ProjectGuid>
-    <RootNamespace>MyCalculatur</RootNamespace>
+    <RootNamespace>mycalculator</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>my_calculator</ProjectName>
   </PropertyGroup>
