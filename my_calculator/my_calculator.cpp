@@ -58,8 +58,7 @@ int main()
     double result = 0.0;
     char oper = '+';
 
- /*
-    cout << "Пожалуйста, введите операцию, которую необходимо выполнить. Формат: a+b | a-b | a*b | a/b" << endl;
+/*    cout << "Пожалуйста, введите операцию, которую необходимо выполнить. Формат: a+b | a-b | a*b | a/b" << endl;
     
     calculator c;
     while (true)
@@ -76,8 +75,7 @@ int main()
             result = c.Calculate(x, oper, y);
         }
         cout << "Результат " << "операция " << x << oper << y << " равен: " << result << endl;
-    }
-*/
+    }*/
 
     return 0;
 }
