@@ -2,25 +2,25 @@
 #include <cmath>
 
 // Сложение
-double calculator::add(double x, char oper, double y)
+double calculator::add(double x, double y)
 {
     return x + y;
 }
 
 // Вычитание
-double calculator::sub(double x, char oper, double y)
+double calculator::sub(double x, double y)
 {
     return x - y;
 }
 
 // Умножение
-double calculator::mul(double x, char oper, double y)
+double calculator::mul(double x, double y)
 {
     return x * y;
 }
 
 // Деление
-double calculator::div(double x, char oper, double y)
+double calculator::div(double x, double y)
 {
     return x / y;
 } 
@@ -54,4 +54,20 @@ double calculator::lin(double a, double b)
     return result;
 }
 
-// Корень квадратного уравнения
+// Поиск кореней квадратного уравнения
+void calculator::fsqrt(double a, double b, double c, double& x1, double& x2, double& d)
+{
+    d = b * b - 4 * a * c; 
+
+    if (d > 0)
+    {
+        x1 = (-b + sqrt(d)) / 2 * a;
+        x2 = (-b - sqrt(d)) / 2 * a; 
+
+    }
+
+    if (d == 0)
+    {
+        x1 = x2 = (-b) / 2 * a;
+    }
+}

@@ -7,75 +7,117 @@ using namespace std;
 int main()
 {
     bool status = true;
-    char select;
+    int choise = 0;
 
     setlocale(LC_ALL, "ru");
 
-    cout << "Программа Калькулятор версия 2.0.0.0, разработчик: Мальцев Глеб Евгеньевич" << endl << endl;
-    cout << "Выбирите режим калькулятора:" << endl;
-    cout << "1 - Простые операции" << endl;
-    cout << "2 - Вычесление корня" << endl;
-    cout << "3 - Возведение в степень" << endl;
-    cout << "4 - Решение линейного уровнения" << endl;
-    cout << "5 - Решение корня квадратного уравнения" << endl << endl;
+    cout << "Программа Калькулятор версия 3.0.0.0, разработчик: Мальцев Глеб Евгеньевич" << endl << endl;
+
+    calculator calc;
+
+    double a = 0;
+    double b = 0;
+    double c = 0;
+    double d = 0;
+    double x1 = 0;
+    double x2 = 0;
 
     while (status)
     {
-        while (cin >> select)
+
+
+
+        cout << "Выберите режим калькулятора:" << endl;
+        cout << "1 - Сложение" << endl;
+        cout << "2 - Вычитание" << endl;
+        cout << "3 - Умножение" << endl;
+        cout << "4 - Деление" << endl;
+        cout << "5 - Вычесление корня" << endl;
+        cout << "6 - Возведение в степень" << endl;
+        cout << "7 - Решение линейного уровнения" << endl;
+        cout << "8 - Решение корня квадратного уравнения" << endl;
+        cout << "0 - Завершение работы" << endl << endl;
+
+        cin >> choise;
+
+
+        switch (choise)
         {
-            if (isdigit(select)) {
-                switch (select)
-                {
-                case '1':
-                    cout << "1" << endl;
-                    break;
-                case '2':
-                    cout << "2" << endl;
-                    break;
-                case '3':
-                    cout << "3" << endl;
-                    break;
-                case '4':
-                    cout << "4" << endl;
-                    break;
-                case '5':
-                    cout << "5" << endl;
-                    break;
-                default:
-                    cout << "Неверный выбор режима, повторите ввод." << endl;
-                    break;
-                }
-            } 
-            else
-            {
-                cout << "Для выбора режима нужно использовать цифры." << endl;
-            }
+            // Завершение работы
+        case 0:
+                cout << "Завершение работы." << endl << endl;
+                status = false;
+                break;
+
+            // Сложение
+        case 1:
+            cout << "Введение значение 1" << endl;
+            cin >> a;
+
+            cout << "Введение значения 2" << endl;
+            cin >> b;
+
+            cout << a << " + " << b << " = " << calc.add(a, b) << endl << endl;
+            break;
+
+            // Вычитание
+        case 2:
+            cout << "Введение значение 1" << endl;
+            cin >> a;
+
+            cout << "Введение значения 2" << endl;
+            cin >> b;
+
+            cout << a << " - " << b << " = " << calc.sub(a, b) << endl << endl;
+            break;
+
+            // Умножение
+        case 3:
+            cout << "Введение значение 1" << endl;
+            cin >> a;
+
+            cout << "Введение значения 2" << endl;
+            cin >> b;
+
+            cout << a << " * " << b << " = " << calc.mul(a, b) << endl << endl;
+            break;
+
+            // Деление
+        case 4:
+            cout << "Введение значение 1" << endl;
+            cin >> a;
+
+            cout << "Введение значения 2" << endl;
+            cin >> b;
+
+            cout << a << " / " << b << " = " << calc.div(a, b) << endl << endl;
+            break;
+
+            // Квадратный корень
+        case 5:
+            cout << "Введение значение" << endl;
+            cin >> a;
+
+            cout << "Квадратный корень " << a << " = " << calc.sqr(a) << endl << endl;
+            break;
+
+            // Возведение в степень
+        case 6:
+            cout << "Введение значение 1" << endl;
+            cin >> a;
+
+            cout << "Введение значения 2" << endl;
+            cin >> b;
+
+            cout << a << " в степени " << b << " = " << calc.deg(a, b) << endl << endl;
+            break;
+
+        default:
+            cout << "Произведён неверный ввод, повторите ввод." << endl << endl;
+            break;
         }
     }
 
-    double x = 0.0;
-    double y = 0.0;
-    double result = 0.0;
-    char oper = '+';
-
-/*    cout << "Пожалуйста, введите операцию, которую необходимо выполнить. Формат: a+b | a-b | a*b | a/b" << endl;
-    
-    calculator c;
-    while (true)
-    {
-        cin >> x >> oper >> y;
-
-        if (oper == '/' && (x == 0 || y== 0))
-        {
-            cout << "Вы попытались разделить на ноль, но увы не прокатило." << endl;
-            continue;
-        }
-        else
-        {
-            result = c.Calculate(x, oper, y);
-        }
-        cout << "Результат " << "операция " << x << oper << y << " равен: " << result << endl;
-    }*/
-
     return 0;
 }
+
