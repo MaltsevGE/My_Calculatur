@@ -25,16 +25,16 @@ double calculator::div(double x, double y)
     return x / y;
 } 
 
-// Степень
-double calculator::deg(double x, double y)
-{
-    return pow(x, y);
-}
-
 // Квадратный корень
 double calculator::sqr(double x)
 {
     return sqrt(x); 
+}
+
+// Степень
+double calculator::deg(double x, double y)
+{
+    return pow(x, y);
 }
 
 // Линейное уравнение (ax = b)
