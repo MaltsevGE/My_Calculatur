@@ -11,7 +11,7 @@ int main()
 
     setlocale(LC_ALL, "ru");
 
-    cout << "Программа Калькулятор версия 3.0.1.0, разработчик: Мальцев Глеб Евгеньевич" << endl << endl;
+    cout << "Программа Калькулятор версия 4.0.0.0, разработчик: Мальцев Глеб Евгеньевич" << endl << endl;
 
     calculator calc;
 
@@ -39,6 +39,7 @@ int main()
         cout << "0 - Завершение работы" << endl << endl;
 
         cin >> choise;
+        cout << endl;
 
 
         switch (choise)
@@ -51,65 +52,100 @@ int main()
 
             // Сложение
         case 1:
-            cout << "Введение слагаеммое 1" << endl;
+            cout << "Введение слагаеммое 1: ";
             cin >> a;
 
-            cout << "Введение слагаеммое 2" << endl;
+            cout << "Введение слагаеммое 2: ";
             cin >> b;
 
-            cout << a << " + " << b << " = " << calc.add(a, b) << endl << endl;
+            cout << "Результат: " << a << " + " << b << " = " << calc.add(a, b) << endl << endl;
             break;
 
             // Вычитание
         case 2:
-            cout << "Введение уменьшаемое" << endl;
+            cout << "Введение уменьшаемое: ";
             cin >> a;
 
-            cout << "Введение вычитаемое" << endl;
+            cout << "Введение вычитаемое: ";
             cin >> b;
 
-            cout << a << " - " << b << " = " << calc.sub(a, b) << endl << endl;
+            cout << "Результат: " << a << " - " << b << " = " << calc.sub(a, b) << endl << endl;
             break;
 
             // Умножение
         case 3:
-            cout << "Введение множитель 1" << endl;
+            cout << "Введение множитель 1: ";
             cin >> a;
 
-            cout << "Введение множитель 2" << endl;
+            cout << "Введение множитель 2: ";
             cin >> b;
 
-            cout << a << " * " << b << " = " << calc.mul(a, b) << endl << endl;
+            cout << "Результат: " << a << " * " << b << " = " << calc.mul(a, b) << endl << endl;
             break;
 
             // Деление
         case 4:
-            cout << "Введение делимое" << endl;
+            cout << "Введение делимое: " << endl;
             cin >> a;
 
-            cout << "Введение делитель" << endl;
+            cout << "Введение делитель: ";
             cin >> b;
 
-            cout << a << " / " << b << " = " << calc.div(a, b) << endl << endl;
+            cout << "Результат: " << a << " / " << b << " = " << calc.div(a, b) << endl << endl;
             break;
 
             // Квадратный корень
         case 5:
-            cout << "Введение число" << endl;
+            cout << "Введение число: " << endl;
             cin >> a;
 
-            cout << "Квадратный корень " << a << " = " << calc.sqr(a) << endl << endl;
+            cout << "Квадратный корень" << a << " = " << calc.sqr(a) << endl << endl;
             break;
 
             // Возведение в степень
         case 6:
-            cout << "Введение значение" << endl;
+            cout << "Введение значение: ";
             cin >> a;
 
-            cout << "Введите степень" << endl;
+            cout << "Введите степень: ";
             cin >> b;
 
-            cout << a << " в степени " << b << " = " << calc.deg(a, b) << endl << endl;
+            cout << "Результат: " << a << " в степени " << b << " = " << calc.deg(a, b) << endl << endl;
+            break;
+
+            // Линейное уравнение
+        case 7:
+            cout << "Введение значение a: ";
+            cin >> a;
+
+            cout << "Введение значение b: ";
+            cin >> b;
+
+            cout << "Результат: x = " << calc.lin(a, b) << endl << endl;
+            break;
+
+            // Нахождение корней квадратного уравнения
+        case 8:
+            cout << "Введение значение a: ";
+            cin >> a;
+
+            cout << "Введение значение b: ";
+            cin >> b;
+
+            cout << "Введение значение c: ";
+            cin >> c;
+
+            calc.fsqrt(a, b, c, x1, x2, d);
+
+            if (d < a)
+            {
+                cout << "При значении a = " << a << ", b = " << b << ", c = " << c << " нахождение корней квадратного уравнения не возможно." << endl << endl;
+            }
+            else
+            {
+                cout << "Результат: корень x1 = " << x1 << " , корень x2 = " << x2 << endl << endl;
+            }
+
             break;
 
         default:
